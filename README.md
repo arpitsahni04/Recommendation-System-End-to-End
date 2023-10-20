@@ -5,10 +5,10 @@ This is a project that focuses on the implementaion and operation of a recommend
 ---
 ## Key Highlights
 
-Deployed real-time Recommendation system (collaborative filtering) for 13k movies, 5 Millon users with <800ms response time.
-Built data-pipeline to automatically ingest from Kafka stream, and perform data cleaning & quality checks. Established CI/CD using Jenkins, unit tests, and coverage reports.
-Setup Real-time Model Monitoring with Grafana and Prometheus to check system health and data drift and initiate model retraining. Performed A/B testing for new features in production. Achieved <0.1% downtime during container switching.
-Developed provenance tracking system using MLFlow to monitor recommendation pipeline, model, and data versions in production.
+1. Deployed real-time Recommendation system (collaborative filtering) for 13k movies, 5 Millon users with <800ms response time.'
+2. Built data-pipeline to automatically ingest from Kafka stream, and perform data cleaning & quality checks. Established CI/CD using Jenkins, unit tests, and coverage reports.
+3. Setup Real-time Model Monitoring with Grafana and Prometheus to check system health and data drift and initiate model retraining. Performed A/B testing for new features in production. Achieved <0.1% downtime during container switching.
+4. Developed provenance tracking system using MLFlow to monitor recommendation pipeline, model, and data versions in production.
 ---
 
 The current folder structure is as follows:
