@@ -2,6 +2,7 @@
 # A Movie Recommendation System
 
 This is a project that focuses on the implementaion and operation of a recommendation service in production, which will entail many factors, including deployment, scaling, reliability, drift and feedback loop.
+
 ---
 ## Key Highlights
 
