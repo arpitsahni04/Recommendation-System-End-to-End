@@ -3,7 +3,8 @@
 
 This is a project that focuses on the implementaion and operation of a recommendation service in production, which will entail many factors, including deployment, scaling, reliability, drift and feedback loop.
 ---
-##Key Highlights
+## Key Highlights
+
 Deployed real-time Recommendation system (collaborative filtering) for 13k movies, 5 Millon users with <800ms response time.
 Built data-pipeline to automatically ingest from Kafka stream, and perform data cleaning & quality checks. Established CI/CD using Jenkins, unit tests, and coverage reports.
 Setup Real-time Model Monitoring with Grafana and Prometheus to check system health and data drift and initiate model retraining. Performed A/B testing for new features in production. Achieved <0.1% downtime during container switching.
