@@ -2,8 +2,46 @@
 # A Movie Recommendation System
 
 This is a project that focuses on the implementaion and operation of a recommendation service in production, which will entail many factors, including deployment, scaling, reliability, drift and feedback loop.
+---
+##Key Highlights
+Deployed real-time Recommendation system (collaborative filtering) for 13k movies, 5 Millon users with <800ms response time.
+Built data-pipeline to automatically ingest from Kafka stream, and perform data cleaning & quality checks. Established CI/CD using Jenkins, unit tests, and coverage reports.
+Setup Real-time Model Monitoring with Grafana and Prometheus to check system health and data drift and initiate model retraining. Performed A/B testing for new features in production. Achieved <0.1% downtime during container switching.
+Developed provenance tracking system using MLFlow to monitor recommendation pipeline, model, and data versions in production.
+---
 
 The current folder structure is as follows:
+```
+
+├───data
+│   ├───data_archive
+│   │   ├───data_v1
+│   │   ├───data_v2
+│   │   └───train_data
+│   ├───data_daily
+│   ├───data_experimentation
+│   ├───data_monitor
+│   ├───stats_daily
+│   └───__pycache__
+├───M4 analysis
+├───src
+│   ├───data
+│   ├───data_read
+│   │   └───scripts_archive
+│   ├───drift_evaluation
+│   ├───evaluation
+│   ├───experimentation
+│   ├───fairness
+│   ├───models
+│   │   ├───KNN
+│   │   └───SVD
+│   ├───monitering
+│   │   └───prometheus
+│   └───__pycache__
+└───tests
+    └───__pycache__
+
+```
 
 - Under our data folder, we have uploaded the data in the form of csv files that has been extracted from the kafka streams, cleaned and preprocessed. There're three notebook files which contain the process for data cleaning and information collection.
 
