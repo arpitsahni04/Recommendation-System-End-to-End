@@ -1,0 +1,4 @@
+venv/
+.DS_Store
+data/data_daily/kafka_ratings_*
+src/models/model_*

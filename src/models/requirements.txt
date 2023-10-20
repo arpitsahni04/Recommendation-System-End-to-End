@@ -1,0 +1,4 @@
+pandas
+seaborn 
+surprise
+compress_pickle

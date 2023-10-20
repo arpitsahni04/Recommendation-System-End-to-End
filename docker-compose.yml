@@ -1,0 +1,21 @@
+version: '3.7'
+
+networks:
+  my-network:
+    external: false
+
+services:
+  movie_recommender:
+    image: ${IMAGE}
+    hostname: movie_recommender
+    ports:
+    - "8082:8082"
+    networks:
+    - my-network
+    deploy:
+      mode: replicated
+      replicas: 1
+      update_config:
+        order: start-first
+        failure_action: rollback
+        delay: 5s

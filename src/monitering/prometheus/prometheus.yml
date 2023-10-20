@@ -1,0 +1,43 @@
+# my global config
+global:
+  scrape_interval:     15s # By default, scrape targets every 15 seconds.
+  evaluation_interval: 15s # By default, scrape targets every 15 seconds.
+
+  external_labels:
+      #monitor: 'demo-monitoring'
+      monitor: 'node'
+
+# A scrape configuration containing exactly one endpoint to scrape:
+# Here it's Prometheus itself.
+scrape_configs:
+  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: 'prometheus'
+    scrape_interval: 5s
+    static_configs:
+         - targets: ['localhost:9090'] #target here
+
+  - job_name: 'log'
+    scrape_interval: 5s
+    static_configs:
+        - targets: ['localhost:8765'] #target here
+
+  - job_name: 'main'
+    # scrape_interval: 5s
+    metrics_path: '/metrics'
+    static_configs:
+      - targets: ['localhost:8084']
+
+  # - job_name: 'online_evaluation'
+  #   metrics_path: '/metrics'
+  #   static_configs:
+  #     - targets: ['localhost:8083']
+
+  - job_name: 'node_exp'
+    scrape_interval: 5s
+    static_configs:
+        - targets: [ 'localhost:9100'] #target here
+
+
+
+    ####################    
+    
