@@ -1,5 +1,6 @@
 
-# A Movie Recommendation System
+# Movie Recommendation System ![popcorn-large](https://github.com/arpitsahni04/Recommendation-System-End-to-End/assets/81643693/053c2ff3-71c5-4098-ac87-7a3e5af2b114)
+
 
 This is a project that focuses on the implementaion and operation of a recommendation service in production, which will entail many factors, including deployment, scaling, reliability, drift and feedback loop.
 
