@@ -46,15 +46,34 @@ The current folder structure is as follows:
 
 ```
 
-- Under our data folder, we have uploaded the data in the form of csv files that has been extracted from the kafka streams, cleaned and preprocessed. There're three notebook files which contain the process for data cleaning and information collection.
+# Project Deployment Guide
 
-- The models folder has two pickled model files (SVD and KNN) that we experimented with. It also contains a .ipnyb notebook that contains the code that was used for EDA as well as model training.
+## Data Files
+- Our data is located under the "data" folder in the form of CSV files. These files have been extracted from Kafka streams, cleaned, and preprocessed.
 
-- The root folder contains a main.py file which creates and deploys the flask application. This flask application has the /recommend endpoint which makes 20 personalized movie recommendations given a user ID.
+## Notebook Files
+- There are three notebook files under the project:
+  - Data Cleaning Notebook
+  - Information Collection Notebook
+  - Other Data Processing Notebook
 
-We have deployed our flask app to our VM as an isolated docker container, the Dockerfile for this is also in the root folder.
+## Model Files
+- The "models" folder contains two pickled model files: SVD and KNN. You can find the code used for model training and Exploratory Data Analysis (EDA) in the "models.ipynb" notebook.
 
-In order to redeploy the service on the VM, ssh into the VM and navigate to the root folder of the project. Then, run the following commands:
+## Flask Application
+- The core of our project is the Flask application, which is in the root folder. This application provides a "/recommend" endpoint that offers personalized movie recommendations based on a user's ID.
+
+## Docker Deployment
+- We've deployed our Flask app as an isolated Docker container on a virtual machine (VM). The Dockerfile required for this deployment can be found in the root folder.
+
+## Redeployment Instructions
+To redeploy the service on your VM, follow these steps:
+
+1. **SSH into the VM**: Access your VM via SSH.
+
+2. **Navigate to Project Root**: After logging into your VM, navigate to the root folder of your project where "main.py" and the Dockerfile are located.
+
+3. **Execute the Following Commands**:
 
 ```
 docker build -t recommender .
